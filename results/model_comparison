@@ -1,0 +1,26 @@
+# Model Comparison Results
+
+This directory contains the comparison results of different sentiment analysis models applied to Malay and English tweets. The models evaluated include Naive Bayes, embedding-based models, and traditional sentiment analysis algorithms. 
+
+## Summary of Results
+
+- **Model Performance Metrics**: Each model's performance is evaluated based on accuracy, precision, recall, and F1-score.
+- **Confusion Matrices**: Visual representations of the models' predictions versus actual labels are included to illustrate the models' performance in detail.
+
+## Models Evaluated
+
+1. **Naive Bayes**
+   - Performance metrics: [Insert metrics here]
+   - Confusion matrix: [Insert confusion matrix here]
+
+2. **Embedding Models**
+   - Performance metrics: [Insert metrics here]
+   - Confusion matrix: [Insert confusion matrix here]
+
+3. **Traditional Models**
+   - Performance metrics: [Insert metrics here]
+   - Confusion matrix: [Insert confusion matrix here]
+
+## Conclusion
+
+The results provide insights into the effectiveness of each model for sentiment analysis on the given dataset. Further analysis can be conducted to fine-tune the models and improve their performance.

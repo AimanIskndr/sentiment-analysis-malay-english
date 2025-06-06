@@ -1,0 +1,31 @@
+# Configuration settings for the sentiment analysis project
+
+data:
+  raw_data_path: "data/raw/semisupervised-bert-xlnet.csv"
+  processed_data_path: "data/processed/cleaned_data.csv"
+  train_test_split_path: "data/splits/"
+  
+model:
+  naive_bayes:
+    alpha: 1.0
+  embedding_models:
+    embedding_dim: 100
+  traditional_models:
+    max_features: 5000
+
+evaluation:
+  metrics:
+    accuracy: true
+    precision: true
+    recall: true
+    f1_score: true
+  confusion_matrix:
+    save_path: "results/confusion_matrices/"
+  
+training:
+  test_size: 0.2
+  random_state: 42
+
+logging:
+  level: "INFO"
+  log_file: "logs/project.log"

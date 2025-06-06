@@ -1,0 +1,16 @@
+import pandas as pd
+
+# Sample performance metrics data
+performance_data = {
+    'Model': ['Naive Bayes', 'Embedding Model', 'Traditional Model'],
+    'Accuracy': [0.85, 0.90, 0.88],
+    'Precision': [0.84, 0.89, 0.87],
+    'Recall': [0.83, 0.88, 0.86],
+    'F1 Score': [0.83, 0.88, 0.86]
+}
+
+# Create a DataFrame
+performance_df = pd.DataFrame(performance_data)
+
+# Save to CSV
+performance_df.to_csv('performance_metrics.csv', index=False)
