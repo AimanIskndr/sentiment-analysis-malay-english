@@ -47,7 +47,7 @@ sentiment-analysis-malay-english
 
 1. **Clone the repository**:
    ```
-   git clone <repository-url>
+   git clone https://github.com/AimanIskndr/sentiment-analysis-malay-english
    cd sentiment-analysis-malay-english
    ```
 
