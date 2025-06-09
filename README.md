@@ -5,55 +5,37 @@ This project aims to perform sentiment analysis on a dataset of Malay and Englis
 ## Project Structure
 
 ```
-sentiment-analysis-malay-english
-├── data
-│   ├── raw
-│   │   └── semisupervised-bert-xlnet.csv  # Raw dataset of tweets
-│   ├── processed                            # Directory for cleaned and processed data
-│   └── splits                               # Directory for training and testing splits
-├── src
-│   ├── data_preprocessing                   # Module for data preprocessing
-│   │   ├── __init__.py
-│   │   ├── data_cleaner.py                  # Functions to clean the dataset
-│   │   └── text_preprocessor.py              # Functions for text preprocessing tasks
-│   ├── models                               # Module for sentiment analysis models
-│   │   ├── __init__.py
-│   │   ├── naive_bayes.py                   # Implementation of Naive Bayes algorithm
-│   │   ├── embedding_models.py               # Embedding-based models
-│   │   └── traditional_models.py             # Traditional sentiment analysis algorithms
-│   ├── evaluation                            # Module for model evaluation
-│   │   ├── __init__.py
-│   │   ├── metrics.py                        # Functions for performance metrics
-│   │   └── confusion_matrix.py               # Functions for confusion matrix visualization
-│   ├── utils                                 # Utility functions
-│   │   ├── __init__.py
-│   │   └── data_split.py                     # Functions for dataset splitting
-│   └── main.py                              # Entry point for the project
-├── notebooks                                 # Jupyter notebooks for exploration and analysis
+sentiment-analysis-malay-english/
+├── config.yaml
+├── README.md
+├── requirements.txt
+├── data/
+│   ├── splits/
+│   ├── processed/
+│   │   └── cleaned_data.csv
+│   └── raw/
+│       └── semisupervised-bert-xlnet.csv
+├── notebooks/
 │   ├── data_exploration.ipynb
 │   ├── preprocessing.ipynb
-│   ├── model_training.ipynb
-│   └── evaluation.ipynb
-├── results                                   # Directory for storing results
-│   ├── confusion_matrices                   # Confusion matrices for each model
-│   ├── performance_metrics                   # Performance metrics results
-│   └── model_comparison                      # Comparison results of different models
-├── requirements.txt                          # Project dependencies
-├── config.yaml                               # Configuration settings
-└── README.md                                 # Project documentation
+│   └── model_train_and_eval.ipynb
+├── results/
+│   ├── confusion_matrices/
+│   ├── model_comparison/
+│   └── performance_metrics/
 ```
 
 ## Setup Instructions
 
 1. **Clone the repository**:
-   ```
+   ```bash
    git clone https://github.com/AimanIskndr/sentiment-analysis-malay-english
    cd sentiment-analysis-malay-english
    ```
 
 2. **Install dependencies**:
    Ensure you have Python installed, then run:
-   ```
+   ```bash
    pip install -r requirements.txt
    ```
 
@@ -62,7 +44,7 @@ sentiment-analysis-malay-english
 
 4. **Run the Project**:
    Execute the main script to start the sentiment analysis process:
-   ```
+   ```bash
    python src/main.py
    ```
 
@@ -72,6 +54,36 @@ sentiment-analysis-malay-english
 - To implement and compare various sentiment analysis models.
 - To evaluate model performance using confusion matrices and other metrics.
 
+## Models Implemented
+
+1. **NLTK Sentiment Analysis (VADER)**: Rule-based sentiment analysis.
+2. **Multinomial Naive Bayes (MNB)**: Using TF-IDF features.
+3. **Linear Support Vector Machine (SVM)**: Using TF-IDF features.
+4. **Logistic Regression**: Using sentence embeddings from `paraphrase-multilingual-MiniLM-L12-v2`.
+
+## Evaluation Metrics
+
+- **Accuracy**
+- **Macro-averaged F1 Score**
+- **Confusion Matrices**
+
+## Results
+
+The following models were evaluated:
+
+| Model                  | Accuracy | Macro-F1 |
+|------------------------|----------|----------|
+| **VADER**              | 0.XXX    | 0.XXX    |
+| **Linear SVM (TF-IDF)**| 0.XXX    | 0.XXX    |
+| **Multinomial NB (TF-IDF)** | 0.XXX | 0.XXX    |
+| **MiniLM + Logistic Regression** | 0.XXX | 0.XXX |
+
+(Note: Replace `0.XXX` with actual results after running the evaluation.)
+
 ## Acknowledgments
 
-This project utilizes various libraries and tools for data processing and machine learning. Special thanks to the contributors of the datasets and libraries used.
+This project utilizes various libraries and tools for data processing and machine learning. Special thanks to the contributors of the datasets and libraries used, including:
+
+- Pre-trained FastText embeddings: [FastText](https://fasttext.cc/)
+- Sentence embeddings: [SentenceTransformers](https://www.sbert.net/)
+- NLTK VADER Sentiment Analysis: [NLTK](https://www.nltk.org/)
